@@ -90,4 +90,27 @@ document.addEventListener('DOMContentLoaded', () => {
             card.style.setProperty('--mouse-y', `${y}px`);
         });
     });
+
+    // Contact Modal Logic
+    const contactBtns = document.querySelectorAll('.contact-btn');
+    const contactModal = document.getElementById('contactModal');
+    const closeModalBtn = document.getElementById('closeModalBtn');
+
+    if (contactModal && closeModalBtn) {
+        contactBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                contactModal.classList.add('show');
+            });
+        });
+
+        closeModalBtn.addEventListener('click', () => {
+            contactModal.classList.remove('show');
+        });
+
+        contactModal.addEventListener('click', (e) => {
+            if (e.target === contactModal) {
+                contactModal.classList.remove('show');
+            }
+        });
+    }
 });
