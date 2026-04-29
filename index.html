@@ -18,6 +18,7 @@
                 <div class="profile-title">
                     <h1>Artem<br>Kotovich</h1>
                     <h2>Senior Designer</h2>
+                    <button class="contact-btn contact-btn-mobile">Contact me</button>
                 </div>
             </div>
             
@@ -53,8 +54,11 @@
 
         <section class="main-content">
             <header class="content-header">
-                <span class="superpower-label">⚡ Superpower:</span>
-                <h2 class="superpower-title">Advanced Design Systems Architecture</h2>
+                <div class="superpower-block">
+                    <span class="superpower-label">⚡ Superpower:</span>
+                    <h2 class="superpower-title">Advanced Design Systems Architecture</h2>
+                </div>
+                <button class="contact-btn contact-btn-desktop">Contact me</button>
             </header>
             
             <div class="experience-header">
@@ -112,6 +116,37 @@
             </div>
         </section>
     </main>
+
+    <div class="contact-modal-overlay" id="contactModal">
+        <div class="contact-modal-card">
+            <button class="close-modal-btn" id="closeModalBtn" aria-label="Close modal">&times;</button>
+            <img src="./sources/avatar.jpeg" alt="Artem Kotovich" class="lock-avatar">
+            <h2>Artem Kotovich</h2>
+            <h3>Senior Designer</h3>
+            
+            <div class="lock-meta">
+                <span>🇱🇹 Vilnius, Lithuania</span>
+            </div>
+            
+            <hr class="lock-divider">
+            
+            <div class="contact-info">
+                <a href="tel:+37065954549" class="contact-link">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                    +37065954549
+                </a>
+                <a href="mailto:art.a.kotovich@gmail.com" class="contact-link">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                    art.a.kotovich@gmail.com
+                </a>
+                <a href="https://www.linkedin.com/in/art-a-kotovich/" target="_blank" class="contact-link">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+                    LinkedIn Profile
+                </a>
+            </div>
+        </div>
+    </div>
+
     <script src="script.js"></script>
 </body>
 </html>
