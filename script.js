@@ -12,7 +12,7 @@ function createLockScreen() {
     lockScreen.className = 'lock-screen fade-in';
     lockScreen.innerHTML = `
         <div class="lock-card">
-            <img src="sources/avatar.jpeg" alt="Artem Kotovich" class="lock-avatar">
+            <img src="./sources/avatar.jpeg" alt="Artem Kotovich" class="lock-avatar">
             <h2>Artem Kotovich</h2>
             <h3>Senior Designer</h3>
             
