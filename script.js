@@ -1,4 +1,5 @@
 const VALID_HASH = "6e17f7196e0c75a2c25d475dd9239dc4f3f6a5047a18e1a71c1472b665c75b3c";
+const AUTH_KEY = 'portfolio_auth';
 
 async function sha256(message) {
     const msgBuffer = new TextEncoder().encode(message);
@@ -38,7 +39,7 @@ function createLockScreen() {
     const checkPassword = async () => {
         const hash = await sha256(pwdInput.value);
         if (hash === VALID_HASH) {
-            sessionStorage.setItem('portfolio_auth', hash);
+            sessionStorage.setItem(AUTH_KEY, hash);
             unlockPortfolio();
         } else {
             errorMsg.classList.add('show');
@@ -70,7 +71,7 @@ function unlockPortfolio() {
 
 document.addEventListener('DOMContentLoaded', () => {
     // Check authentication (using sessionStorage so it resets after closing tab, or change to localStorage if preferred)
-    const auth = sessionStorage.getItem('portfolio_auth');
+    const auth = sessionStorage.getItem(AUTH_KEY);
     if (auth === VALID_HASH) {
         unlockPortfolio();
     } else {
