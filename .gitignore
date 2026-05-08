@@ -15,3 +15,4 @@ Thumbs.db
 *.njsproj
 *.sln
 *.sw?
+http_server_output.log

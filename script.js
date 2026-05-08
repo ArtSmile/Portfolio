@@ -23,7 +23,7 @@ function createLockScreen() {
             
             <hr class="lock-divider">
             
-            <p style="margin-bottom: 15px;">Please enter the password to view the portfolio.</p>
+            <p class="lock-instruction">Please enter the password to view the portfolio.</p>
             <input type="password" class="password-input" id="pwdInput" placeholder="••••" autocomplete="new-password">
             <button class="unlock-btn" id="unlockBtn">Unlock</button>
             <div class="error-msg" id="errorMsg">Incorrect password</div>
