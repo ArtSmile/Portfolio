@@ -114,3 +114,13 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 });
+
+// Export for Node.js testing
+if (typeof module !== 'undefined' && module.exports) {
+    module.exports = {
+        VALID_HASH,
+        sha256,
+        createLockScreen,
+        unlockPortfolio
+    };
+}
