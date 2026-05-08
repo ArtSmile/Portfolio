@@ -484,6 +484,10 @@ main:not(.unlocked) {
     font-size: 14px;
 }
 
+.lock-card .lock-instruction {
+    margin-bottom: 15px;
+}
+
 .password-input {
     width: 100%;
     padding: 12px 16px;
