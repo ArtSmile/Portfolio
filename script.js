@@ -1,4 +1,6 @@
 const VALID_HASH = "6e17f7196e0c75a2c25d475dd9239dc4f3f6a5047a18e1a71c1472b665c75b3c";
+const ERROR_MSG_TIMEOUT = 2000;
+const FOCUS_TIMEOUT = 100;
 
 async function sha256(message) {
     const msgBuffer = new TextEncoder().encode(message);
@@ -42,7 +44,7 @@ function createLockScreen() {
             unlockPortfolio();
         } else {
             errorMsg.classList.add('show');
-            setTimeout(() => errorMsg.classList.remove('show'), 2000);
+            setTimeout(() => errorMsg.classList.remove('show'), ERROR_MSG_TIMEOUT);
             pwdInput.value = '';
             pwdInput.focus();
         }
@@ -54,7 +56,7 @@ function createLockScreen() {
     });
     
     // Focus after next paint
-    setTimeout(() => pwdInput.focus(), 100);
+    setTimeout(() => pwdInput.focus(), FOCUS_TIMEOUT);
 }
 
 function unlockPortfolio() {
