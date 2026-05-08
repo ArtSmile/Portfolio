@@ -81,13 +81,31 @@ document.addEventListener('DOMContentLoaded', () => {
     const cards = document.querySelectorAll('.project-card');
 
     cards.forEach(card => {
+        let rect;
+        let ticking = false;
+
+        const updateRect = () => {
+            rect = card.getBoundingClientRect();
+        };
+
+        card.addEventListener('mouseenter', updateRect);
+        window.addEventListener('resize', updateRect);
+        window.addEventListener('scroll', updateRect);
+
         card.addEventListener('mousemove', (e) => {
-            const rect = card.getBoundingClientRect();
+            if (!rect) updateRect();
+
             const x = e.clientX - rect.left;
             const y = e.clientY - rect.top;
 
-            card.style.setProperty('--mouse-x', `${x}px`);
-            card.style.setProperty('--mouse-y', `${y}px`);
+            if (!ticking) {
+                requestAnimationFrame(() => {
+                    card.style.setProperty('--mouse-x', `${x}px`);
+                    card.style.setProperty('--mouse-y', `${y}px`);
+                    ticking = false;
+                });
+                ticking = true;
+            }
         });
     });
 
