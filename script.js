@@ -114,3 +114,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 });
+
+if (typeof module !== 'undefined') {
+    module.exports = { sha256, createLockScreen, unlockPortfolio, VALID_HASH };
+}
