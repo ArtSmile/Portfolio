@@ -1,3 +1,4 @@
+(() => {
 const VALID_HASH = "6e17f7196e0c75a2c25d475dd9239dc4f3f6a5047a18e1a71c1472b665c75b3c";
 const ERROR_MSG_TIMEOUT = 2000;
 const FOCUS_TIMEOUT = 100;
@@ -134,3 +135,4 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 });
+})();
